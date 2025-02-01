@@ -1,12 +1,14 @@
 // @ts-ignore
 import logo from './extensions/logo.png';
+import logo2 from 'https://firefist.co.in/wp-content/uploads/2024/05/download-removebg-preview-e1716533462385.png';
 
 const config = {
   head:{
-    favicon:logo
+    favicon:logo,
+    title: 'FireFist'
   },
   menu:{
-    logo:logo
+    logo:logo2
   },
   auth:{
     logo:logo
