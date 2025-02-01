@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Code": {
+      "type": "blocks"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "DescriptionHindi": {
+      "type": "blocks"
+    },
+    "DescriptionMarathi": {
+      "type": "blocks"
+    },
+    "programming_languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programming-language.programming-language",
+      "inversedBy": "posts"
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::topic.topic",
+      "inversedBy": "posts"
+    }
+  }
+}
