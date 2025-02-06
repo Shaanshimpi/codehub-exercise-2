@@ -9,4 +9,11 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      origin: ["*"], // Allow all origins or specify your frontend URL
+    },
+  },
 ];

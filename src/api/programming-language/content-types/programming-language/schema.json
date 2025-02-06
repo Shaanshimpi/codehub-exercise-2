@@ -4,7 +4,8 @@
   "info": {
     "singularName": "programming-language",
     "pluralName": "programming-languages",
-    "displayName": "Programming Language"
+    "displayName": "Programming Language",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,14 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "programming_languages"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
     }
   }
 }

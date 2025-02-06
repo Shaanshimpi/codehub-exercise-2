@@ -408,6 +408,7 @@ export interface ApiProgrammingLanguageProgrammingLanguage
   extends Struct.CollectionTypeSchema {
   collectionName: 'programming_languages';
   info: {
+    description: '';
     displayName: 'Programming Language';
     pluralName: 'programming-languages';
     singularName: 'programming-language';
@@ -425,6 +426,7 @@ export interface ApiProgrammingLanguageProgrammingLanguage
       'api::programming-language.programming-language'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
     Name: Schema.Attribute.String;
     posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
