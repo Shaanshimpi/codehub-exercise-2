@@ -4,7 +4,8 @@
   "info": {
     "singularName": "topic",
     "pluralName": "topics",
-    "displayName": "Topic"
+    "displayName": "Topic",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,9 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "topics"
+    },
+    "index": {
+      "type": "integer"
     }
   }
 }

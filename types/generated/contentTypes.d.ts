@@ -388,6 +388,8 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     Description: Schema.Attribute.Blocks;
     DescriptionHindi: Schema.Attribute.Blocks;
     DescriptionMarathi: Schema.Attribute.Blocks;
+    difficultyLevel: Schema.Attribute.Integer;
+    index: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
@@ -401,6 +403,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    VideoLink: Schema.Attribute.String;
   };
 }
 
@@ -420,6 +423,7 @@ export interface ApiProgrammingLanguageProgrammingLanguage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    index: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -439,6 +443,7 @@ export interface ApiProgrammingLanguageProgrammingLanguage
 export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
   collectionName: 'topics';
   info: {
+    description: '';
     displayName: 'Topic';
     pluralName: 'topics';
     singularName: 'topic';
@@ -450,6 +455,7 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    index: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::topic.topic'> &
       Schema.Attribute.Private;

@@ -38,6 +38,15 @@
       "relation": "manyToMany",
       "target": "api::topic.topic",
       "inversedBy": "posts"
+    },
+    "VideoLink": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "difficultyLevel": {
+      "type": "integer"
     }
   }
 }
