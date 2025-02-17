@@ -9,10 +9,11 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
   {
-    name: "strapi::cors",
+    name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ["*"], // Allow all origins or specify your frontend URL
+      origin: ['http://localhost:3000', 'https://codehub-front-end.vercel.app/', 'https://codehubindia.in'], // Add allowed origins
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization'],
     },
-  },
 ];
