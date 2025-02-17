@@ -16,4 +16,5 @@ module.exports = [
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
     },
+  }
 ];
