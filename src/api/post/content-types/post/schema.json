@@ -47,6 +47,9 @@
     },
     "difficultyLevel": {
       "type": "integer"
+    },
+    "Hints": {
+      "type": "blocks"
     }
   }
 }

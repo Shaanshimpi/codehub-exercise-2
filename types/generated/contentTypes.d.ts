@@ -389,6 +389,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     DescriptionHindi: Schema.Attribute.Blocks;
     DescriptionMarathi: Schema.Attribute.Blocks;
     difficultyLevel: Schema.Attribute.Integer;
+    Hints: Schema.Attribute.Blocks;
     index: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
