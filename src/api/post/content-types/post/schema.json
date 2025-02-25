@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Code": {
       "type": "blocks"
@@ -49,7 +50,8 @@
       "type": "decimal"
     },
     "Hints": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     }
   }
 }

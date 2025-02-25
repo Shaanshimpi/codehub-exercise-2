@@ -389,7 +389,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     DescriptionHindi: Schema.Attribute.Blocks;
     DescriptionMarathi: Schema.Attribute.Blocks;
     difficultyLevel: Schema.Attribute.Decimal;
-    Hints: Schema.Attribute.Blocks;
+    Hints: Schema.Attribute.Blocks & Schema.Attribute.Required;
     index: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
@@ -399,7 +399,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       'api::programming-language.programming-language'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
     topics: Schema.Attribute.Relation<'manyToMany', 'api::topic.topic'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
