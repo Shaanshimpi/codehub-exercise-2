@@ -43,10 +43,10 @@
       "type": "string"
     },
     "index": {
-      "type": "integer"
+      "type": "decimal"
     },
     "difficultyLevel": {
-      "type": "integer"
+      "type": "decimal"
     },
     "Hints": {
       "type": "blocks"
