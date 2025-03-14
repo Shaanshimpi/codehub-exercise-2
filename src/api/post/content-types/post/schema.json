@@ -16,18 +16,6 @@
       "type": "string",
       "required": true
     },
-    "Code": {
-      "type": "blocks"
-    },
-    "Description": {
-      "type": "blocks"
-    },
-    "DescriptionHindi": {
-      "type": "blocks"
-    },
-    "DescriptionMarathi": {
-      "type": "blocks"
-    },
     "programming_languages": {
       "type": "relation",
       "relation": "manyToMany",
@@ -49,9 +37,21 @@
     "difficultyLevel": {
       "type": "decimal"
     },
+    "Code": {
+      "type": "richtext",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "DescriptionHindi": {
+      "type": "richtext"
+    },
+    "DescriptionMarathi": {
+      "type": "richtext"
+    },
     "Hints": {
-      "type": "blocks",
-      "required": true
+      "type": "richtext"
     }
   }
 }

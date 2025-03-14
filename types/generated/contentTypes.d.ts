@@ -381,15 +381,15 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Code: Schema.Attribute.Blocks;
+    Code: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Blocks;
-    DescriptionHindi: Schema.Attribute.Blocks;
-    DescriptionMarathi: Schema.Attribute.Blocks;
+    Description: Schema.Attribute.RichText;
+    DescriptionHindi: Schema.Attribute.RichText;
+    DescriptionMarathi: Schema.Attribute.RichText;
     difficultyLevel: Schema.Attribute.Decimal;
-    Hints: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Hints: Schema.Attribute.RichText;
     index: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
