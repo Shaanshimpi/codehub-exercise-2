@@ -469,6 +469,41 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTutorialTutorial extends Struct.CollectionTypeSchema {
+  collectionName: 'tutorials';
+  info: {
+    description: '';
+    displayName: 'Tutorial';
+    pluralName: 'tutorials';
+    singularName: 'tutorial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Content: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    index: Schema.Attribute.Float;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tutorial.tutorial'
+    > &
+      Schema.Attribute.Private;
+    programming_language: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::programming-language.programming-language'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -981,6 +1016,7 @@ declare module '@strapi/strapi' {
       'api::post.post': ApiPostPost;
       'api::programming-language.programming-language': ApiProgrammingLanguageProgrammingLanguage;
       'api::topic.topic': ApiTopicTopic;
+      'api::tutorial.tutorial': ApiTutorialTutorial;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

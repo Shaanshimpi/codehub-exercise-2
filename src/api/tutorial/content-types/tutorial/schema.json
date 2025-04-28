@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "singularName": "tutorial",
+    "pluralName": "tutorials",
+    "displayName": "Tutorial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "programming_language": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programming-language.programming-language"
+    },
+    "index": {
+      "type": "float"
+    }
+  }
+}
